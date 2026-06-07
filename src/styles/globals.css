@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-navy: #0f172a;
+  --color-gold: #d4af37;
+  --color-light-gold: #f1e5c3;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Luxury Typography */
+.heading-1 {
+  @apply text-4xl md:text-6xl font-serif font-bold text-navy;
+}
+
+.heading-2 {
+  @apply text-3xl md:text-4xl font-serif font-bold text-navy;
+}
+
+.heading-3 {
+  @apply text-2xl md:text-3xl font-serif font-bold text-navy;
+}
+
+.body-text {
+  @apply text-base md:text-lg text-gray-700 leading-relaxed;
+}
+
+.body-small {
+  @apply text-sm md:text-base text-gray-600;
+}
+
+/* Luxury Buttons */
+.btn-primary {
+  @apply px-6 md:px-8 py-3 md:py-4 bg-navy text-white font-semibold rounded-lg hover:bg-opacity-90 transition-all duration-300 shadow-md hover:shadow-lg;
+}
+
+.btn-primary-gold {
+  @apply px-6 md:px-8 py-3 md:py-4 bg-gold text-navy font-semibold rounded-lg hover:bg-opacity-90 transition-all duration-300 shadow-md hover:shadow-lg;
+}
+
+.btn-outline {
+  @apply px-6 md:px-8 py-3 md:py-4 border-2 border-navy text-navy bg-transparent font-semibold rounded-lg hover:bg-navy hover:text-white transition-all duration-300;
+}
+
+.btn-ghost {
+  @apply px-4 py-2 text-navy font-medium hover:text-gold transition-colors duration-300;
+}
+
+/* Luxury Cards */
+.card-luxury {
+  @apply bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100;
+}
+
+.card-hover {
+  @apply transform hover:scale-105 transition-transform duration-300;
+}
+
+/* Sections */
+.section-padding {
+  @apply py-16 md:py-24 px-4 md:px-8;
+}
+
+.section-max-width {
+  @apply max-w-7xl mx-auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+/* Responsive Grid */
+.grid-luxury {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8;
+}
+
+.grid-2 {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8;
+}
+
+/* Form Elements */
+.input-field {
+  @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all duration-300;
+}
+
+.input-field:focus {
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+/* Utility */
+.divider {
+  @apply w-16 h-1 bg-gold rounded-full;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #0f172a 0%, #d4af37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Loading State */
+.loading {
+  @apply opacity-50 pointer-events-none;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
